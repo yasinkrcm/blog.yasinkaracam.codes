@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "title": "Yasin Karacam Blog",
+    "description": "Blog posts about software development, web technologies, and more"
+  },
+  "nav": {
+    "home": "Home",
+    "blog": "Blog",
+    "about": "About",
+    "search": "Search..."
+  },
+  "blog": {
+    "title": "Blog",
+    "readMore": "Read More",
+    "readingTime": "{minutes} min read",
+    "publishedOn": "Published on",
+    "tags": "Tags",
+    "allPosts": "All Posts",
+    "relatedPosts": "Related Posts",
+    "noPostsFound": "No blog posts found yet.",
+    "backToList": "Back to Blog List",
+    "tableOfContents": "Table of Contents"
+  },
+  "pagination": {
+    "previous": "Previous",
+    "next": "Next",
+    "page": "Page"
+  },
+  "footer": {
+    "copyright": "© {year} Yasin Karacam. All rights reserved.",
+    "builtWith": "Built with Next.js and Tailwind CSS"
+  },
+  "seo": {
+    "siteName": "Yasin Karacam Blog",
+    "titleTemplate": "%s | Yasin Karacam Blog"
+  }
+}

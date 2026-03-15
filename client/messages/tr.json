@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "title": "Yasin Karacam Blog",
+    "description": "Yazılım geliştirme, web teknolojileri ve daha fazlası hakkında blog yazıları"
+  },
+  "nav": {
+    "home": "Ana Sayfa",
+    "blog": "Blog",
+    "about": "Hakkımda",
+    "search": "Ara..."
+  },
+  "blog": {
+    "title": "Blog",
+    "readMore": "Devamını Oku",
+    "readingTime": "{minutes} dakika okuma",
+    "publishedOn": "Yayınlanma Tarihi",
+    "tags": "Etiketler",
+    "allPosts": "Tüm Yazılar",
+    "relatedPosts": "İlgili Yazılar",
+    "noPostsFound": "Henüz blog yazısı bulunmuyor.",
+    "backToList": "Blog Listesine Dön",
+    "tableOfContents": "İçindekiler"
+  },
+  "pagination": {
+    "previous": "Önceki",
+    "next": "Sonraki",
+    "page": "Sayfa"
+  },
+  "footer": {
+    "copyright": "© {year} Yasin Karacam. Tüm hakları saklıdır.",
+    "builtWith": "Next.js ve Tailwind CSS ile yapıldı"
+  },
+  "seo": {
+    "siteName": "Yasin Karacam Blog",
+    "titleTemplate": "%s | Yasin Karacam Blog"
+  }
+}
