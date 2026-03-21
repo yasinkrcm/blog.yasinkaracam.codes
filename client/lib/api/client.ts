@@ -36,7 +36,10 @@ apiClient.interceptors.response.use(
           // Unauthorized - clear token and redirect to login
           if (typeof window !== 'undefined') {
             localStorage.removeItem('token');
-            window.location.href = '/admin/login';
+            // Extract locale from current URL or use default
+            const pathSegments = window.location.pathname.split('/');
+            const locale = pathSegments[1] || 'tr';
+            window.location.href = `/${locale}/admin/login`;
           }
           break;
         case 403:

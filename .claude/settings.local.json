@@ -10,7 +10,10 @@
       "Bash(npx tsc:*)",
       "Bash(timeout:*)",
       "mcp__web-reader__webReader",
-      "Bash(node:*)"
+      "Bash(node:*)",
+      "Bash(unzip:*)",
+      "Bash(npm run dev:*)",
+      "Bash(git add:*)"
     ]
   }
 }

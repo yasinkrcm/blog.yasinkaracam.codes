@@ -58,7 +58,7 @@ export function HeroSection({ locale }: HeroSectionProps) {
         >
           <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
           <span className="relative flex items-center justify-center gap-2">
-            {isTr ? "Makaleleri Keşfet" : "Explore Articles"}
+            {isTr ? "Blogu Keşfet" : "Explore Articles"}
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </span>
         </Link>

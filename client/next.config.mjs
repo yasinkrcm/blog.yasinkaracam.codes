@@ -10,6 +10,17 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'images.ctfassets.net',
       },
+      {
+        protocol: 'http',
+        hostname: 'localhost',
+        port: '5000',
+        pathname: '/uploads/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'api.yasinkaracam.codes',
+        pathname: '/uploads/**',
+      },
     ],
   },
 };

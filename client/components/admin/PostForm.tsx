@@ -53,7 +53,18 @@ export default function PostForm({ post, locale }: PostFormProps) {
 
       router.push(`/${locale}/admin/dashboard`);
     } catch (err: any) {
-      setError(err.response?.data?.message || 'Failed to save post');
+      console.error('Post save error:', err.response?.data);
+      const errorMessage = err.response?.data?.message || 'Failed to save post';
+      const validationErrors = err.response?.data?.errors;
+
+      if (validationErrors && validationErrors.length > 0) {
+        const errorDetails = validationErrors.map((e: any) => `${e.field}: ${e.message}`).join('\n');
+        setError(`${errorMessage}:\n${errorDetails}`);
+        // Also log to console for easier debugging
+        console.error('Validation errors:', validationErrors);
+      } else {
+        setError(errorMessage);
+      }
     } finally {
       setLoading(false);
     }
