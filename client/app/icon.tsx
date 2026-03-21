@@ -1,34 +1,31 @@
-import { ImageResponse } from 'next/og'
+import { ImageResponse } from 'next/og';
 
-// Resim boyutu ve tipi
 export const size = {
   width: 32,
   height: 32,
-}
-export const contentType = 'image/png'
+};
+export const contentType = 'image/png';
 
-// Varsayılan fonksiyon mutlaka bir çıktı döndürmeli
 export default function Icon() {
   return new ImageResponse(
     (
       <div
         style={{
-          fontSize: 24,
-          background: 'black',
           width: '100%',
           height: '100%',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
+          background: 'linear-gradient(to right, #0066FF, rgba(0, 102, 255, 0.5))',
           color: 'white',
-          borderRadius: '20%'
+          fontSize: 16,
+          fontWeight: 'bold',
+          fontFamily: 'sans-serif',
         }}
       >
-        Y
+        YK
       </div>
     ),
-    {
-      ...size,
-    }
-  )
+    { ...size }
+  );
 }
