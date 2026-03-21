@@ -75,15 +75,15 @@ export default function Header() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         className={`w-full max-w-5xl transition-all duration-300 rounded-full px-6 h-14 sm:h-16 flex items-center justify-between border ${isScrolled
-            ? 'glass shadow-[0_8px_32px_rgba(0,0,0,0.5)] border-white/10 dark:border-white/5 bg-background/60 dark:bg-black/40 backdrop-blur-xl'
-            : 'border-transparent bg-transparent'
+          ? 'glass shadow-[0_8px_32px_rgba(0,0,0,0.5)] border-white/10 dark:border-white/5 bg-background/60 dark:bg-black/40 backdrop-blur-xl'
+          : 'border-transparent bg-transparent'
           }`}
       >
         {/* Logo */}
         <Link href="/" className="relative group flex items-center gap-2 z-20">
           <span className="absolute -inset-4 rounded-xl bg-gradient-to-r from-primary/30 to-fuchsia-500/0 opacity-0 group-hover:opacity-100 transition-opacity blur-xl"></span>
           <Image
-            src="/favicon.svg"
+            src="/apple-touch-icon.png"
             alt="Logo"
             width={28}
             height={28}
@@ -208,8 +208,8 @@ export default function Header() {
                         href={item.href}
                         onClick={() => setIsMobileMenuOpen(false)}
                         className={`flex items-center gap-3 px-4 py-3 rounded-2xl text-sm font-medium transition-all ${isActive
-                            ? 'bg-white/10 text-white border border-white/10 shadow-[var(--glow-primary)]'
-                            : 'text-muted-foreground hover:bg-white/5 hover:text-white'
+                          ? 'bg-white/10 text-white border border-white/10 shadow-[var(--glow-primary)]'
+                          : 'text-muted-foreground hover:bg-white/5 hover:text-white'
                           }`}
                       >
                         <span className={isActive ? 'text-primary' : ''}>
@@ -238,8 +238,8 @@ export default function Header() {
                           setIsMobileMenuOpen(false);
                         }}
                         className={`px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider transition-all ${locale === loc
-                            ? 'bg-primary text-white shadow-lg'
-                            : 'text-muted-foreground hover:text-white'
+                          ? 'bg-primary text-white shadow-lg'
+                          : 'text-muted-foreground hover:text-white'
                           }`}
                       >
                         {loc}
