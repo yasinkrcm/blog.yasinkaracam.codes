@@ -21,6 +21,16 @@ const nextConfig = {
         hostname: 'api.yasinkaracam.codes',
         pathname: '/uploads/**',
       },
+      {
+        protocol: 'http',
+        hostname: 'apiblog.yasinkaracam.codes',
+        pathname: '/uploads/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'apiblog.yasinkaracam.codes',
+        pathname: '/uploads/**',
+      },
     ],
   },
 };
