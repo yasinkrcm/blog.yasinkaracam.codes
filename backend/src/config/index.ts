@@ -5,5 +5,5 @@ export const config = {
   jwtExpire: process.env.JWT_EXPIRE || '7d',
   corsOrigin: process.env.CORS_ORIGIN || 'http://localhost:3000',
   uploadDir: process.env.UPLOAD_DIR || './public/uploads',
-  maxFileSize: parseInt(process.env.MAX_FILE_SIZE || '5242880', 10), // 5MB default
+  maxFileSize: parseInt(process.env.MAX_FILE_SIZE || '20971520', 10), // 20MB default
 };

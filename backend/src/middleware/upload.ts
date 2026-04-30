@@ -15,10 +15,13 @@ const storage = multer.diskStorage({
     cb(null, uploadDir);
   },
   filename: (req, file, cb) => {
-    // Generate unique filename
+    // Generate unique filename with sanitized basename
     const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1e9);
     const ext = path.extname(file.originalname);
-    const basename = path.basename(file.originalname, ext);
+    const basename = path.basename(file.originalname, ext)
+      .replace(/[^a-zA-Z0-9_-]/g, '-')  // Replace spaces, parens, etc. with hyphens
+      .replace(/-+/g, '-')               // Collapse multiple hyphens
+      .replace(/^-|-$/g, '');             // Trim leading/trailing hyphens
     cb(null, `${basename}-${uniqueSuffix}${ext}`);
   },
 });

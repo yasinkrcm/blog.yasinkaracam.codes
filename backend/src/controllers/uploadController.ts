@@ -12,7 +12,7 @@ export const uploadImage = async (req: Request, res: Response): Promise<void> =>
     // Create file URL
     const protocol = req.protocol;
     const host = req.get('host');
-    const filePath = `/uploads/${req.file.filename}`;
+    const filePath = `/uploads/${encodeURIComponent(req.file.filename)}`;
     const fileUrl = `${protocol}://${host}${filePath}`;
 
     res.status(200).json({
