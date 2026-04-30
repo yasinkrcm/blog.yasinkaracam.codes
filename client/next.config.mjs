@@ -31,6 +31,10 @@ const nextConfig = {
         hostname: 'apiblog.yasinkaracam.codes',
         pathname: '/uploads/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
     ],
   },
 };

@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { Link } from '@/lib/i18n/routing';
 import { ArrowUpRight } from 'lucide-react';
 
@@ -66,7 +67,20 @@ export function FeaturedPosts({ locale, posts }: FeaturedPostsProps) {
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 className={`glass-panel overflow-hidden group relative p-8 flex flex-col justify-between hover:-translate-y-1 hover:shadow-[var(--glow-secondary)] transition-all duration-300 cursor-pointer ${layout.colSpan}`}
               >
-                <div className={`absolute inset-0 bg-gradient-to-br ${layout.gradient} opacity-50 group-hover:opacity-100 transition-opacity duration-500`} />
+                {post.fields.featuredImage ? (
+                  <>
+                    <Image
+                      src={post.fields.featuredImage}
+                      alt={post.fields.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 66vw, 50vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20 group-hover:from-black/90 group-hover:via-black/50 transition-all duration-500" />
+                  </>
+                ) : (
+                  <div className={`absolute inset-0 bg-gradient-to-br ${layout.gradient} opacity-50 group-hover:opacity-100 transition-opacity duration-500`} />
+                )}
                 
                 <div className="relative z-10 flex justify-between items-start">
                   <span className="px-3 py-1 rounded-full bg-black/40 text-xs font-semibold text-white/90 tracking-wider border border-white/10 backdrop-blur-md">
